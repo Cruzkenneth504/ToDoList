@@ -1,0 +1,28 @@
+/* FILEPATH: /C:/Users/Kenneth/Desktop/ToDoList/style.css */
+
+/* Reset default list styles */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style for each to-do item */
+.todo-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Checkbox style */
+.todo-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Completed to-do item style */
+.todo-item.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+/* Add more styles as needed */
