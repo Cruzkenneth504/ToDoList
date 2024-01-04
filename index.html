@@ -3,16 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDoList</title>
-    <link rel="stylesheet" href="./style.css">
+ 
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Genos:wght@500&family=Signika:wght@600&display=swap" rel="stylesheet">
+      <!-- Font Awesome cdn css -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />      <link rel="stylesheet" href="./styles.css">
+      <link rel="stylesheet" href="./style.css">
+      <title>ToDoList</title>
 </head>
-<body>
-    <header id="myHeader" class="header">
-        <h1>My Do List</h1>
-        <input type="text" id="myInput" placeholder=" Add To Do...">
-        <span onclick="newIteme()" class="addButton">Add</span>; 
-    </header>
-    <ul class="myItem">
-    </ul>
+<body>  
+  <header>
+
+    <h1><span class="material-symbols-outlined">
+      person</span>My To Do List</h1>
+  </header>
+
+<!--This form element will gather users inputs-->
+  <form action="">
+    <input type="text"  class="todo-input">
+    <button class="todo-button" type="submit">
+      <span class="material-symbols-outlined">
+        add
+        </span>
+    </button>
+   <!--Will create dripdown style list that allows the user from predifined list-->
+     <select name="todos" class="filter-todo">
+       <option value="all">All</option>
+       <option value="completed">Completed</option>
+       <option value="uncompleted">Uncompleted</option>
+     </select>
+  </form>
+
+  <div class="todo-container">
+    <ul class="todo-list"></ul>
+  </div>
+  
+  
+    <script src="./script.js"></script>
 </body>
 </html>

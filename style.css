@@ -1,42 +1,17 @@
-
 * {
-    box-sizing: border-box;
-};
+  margin : 0; 
+  padding: 0;
+  box-sizing: border-box;
 
-/*remove margin and padding from the list*/
-ul {
-    margin: 0;
-    padding: 0;
-};
-
-/* style the list items */
-ul li {
-    cursor: pointer;
-    position: relative;
-    padding: 12px 8px 12px 40px;
-    background: #eee;
-    font-size: 18px;
-    transition: 0.2s; 
-
-    /* controls the text selection on a browser */
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-};
-
-ul li:first-child {
-    background: #f9f9f9;
 }
 
-/* style the list items change whem cursor hovers the item */
-ul li:hover {
-    background: #ddd;
+
+body {
+  background-image: linear-gradient( 108.7deg,  rgba(221,22,224,1) 11%, rgba(111,22,190,1) 88.2% );
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  
 }
 
-/* style the list items when checked change color and strikes out text*/
-ul li.checked {
-    background: #888;
-    color: #fff;
-    text-decoration: line-through;
-}
