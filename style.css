@@ -7,8 +7,9 @@
 
 
 body {
-  background-image: linear-gradient( 108.7deg,  rgba(221,22,224,1) 11%, rgba(111,22,190,1) 88.2% ); 
+  background-image: linear-gradient( 108.7deg,  rgb(142, 1, 145) 11%, rgb(92, 4, 168) 88.2% ); 
   font-family: 'Genos', sans-serif;
+  font-family: 'Oswald', sans-serif;
   color: rgb(22, 19, 19);
   height: 100vh;
   display: flex;
@@ -44,6 +45,12 @@ header.form {
   
 }
 
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 form input {
  background-color: rgba(128, 128, 128, 0.267);
 }
@@ -61,7 +68,7 @@ form input, form button {
   border-radius: 30px
 }
 form button {
-  background-image: linear-gradient(to right, #e08c0dfd 0%, #cc7a00  51%, #bb5d06  100%);
+  background-image: linear-gradient(to right, #db8606fd 0%, #e77123  51%, #fab472  100%);
   background-size: 200% auto;
   cursor: pointer;
   transition: 0.5s;
@@ -89,6 +96,132 @@ form button:hover {
 }
 
 .todo-list {
- min-width: 30%;
+ min-width:70%;
  list-style: none;
 }
+
+.todo {
+margin: 8px; 
+padding-left: 8px; 
+background: white;
+color: rgb(175, 17, 17);
+font-size: 24px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+transition: 0.5s;
+border-radius: 32px;
+}
+
+.todo li {
+  flex: 1;
+}
+
+
+li.todo-item {
+  display: inline;
+  width: 22.5rem;
+  margin-left: -1rem;
+  margin-right: 6.5em;
+  padding: 0rem 0.5rem;
+  border-radius: 30px 0 0 30px;
+  height: 50px;
+  text-align: start;
+  padding-left: 0.90rem;
+  border: 3px solid rgba(175, 17, 17, 0.233);
+
+} 
+
+/*remove any browser default styling*/
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+.select {
+  margin: 1rem; /* you can also convert this to pixels if you want by using this formmula (1rem * 16px = 1rem) */
+  position: relative;
+  overflow: hidden; 
+  border-radius: 3.125rem; /* 50px / 16px = 3.125rem */
+}
+
+
+
+select {
+  background-color: rgba(128, 128, 128, 0.267);
+  color:rgb(0, 143, 24);
+  width: 10rem;
+  height: 3.2rem;
+  cursor: pointer;
+  padding: 1rem; /* 50px / 16px = 3.125rem */
+  font-size: 15px;
+}
+
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background-image: linear-gradient(to right, #db8606fd 0%, #e77123  51%, #fab472  100%);
+  top: 0;
+  right: 0;
+  padding: 1.3rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: rgb(0, 143, 24);
+  font-size: 1.5rem;
+  line-height: 0.45;
+}
+
+.select:hover::after {
+  background: rgb(233, 135, 135);
+  color: rgb(255, 200, 0);
+}
+
+/* js undisplayed css*/
+
+.trash-btn, 
+.complete-btn {
+  padding: 8px;
+  padding-left: 16px;
+  font-size: 28px;
+  border: none;
+  color: white;
+  border: none;
+  padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.complete-btn {
+    background: rgb(248, 214, 92);
+}
+
+.trash-btn {
+    border-top-right-radius: 1.75rem;
+    border-bottom-right-radius: 1.75rem;
+    background: rgb(248, 0, 0);
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash, 
+.fa-check-circle {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.slide {
+    transform: translateX(10rem);
+    opacity: 0;
+}
+
+
